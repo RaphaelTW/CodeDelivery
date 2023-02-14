@@ -33,11 +33,17 @@ type PartialRoutePosition struct {
 	Finished bool      `json:"finished"`
 }
 
+// NewRoute cria uma estrutura *Route
+
+func NewRoute() *Route {
+	return &Route{}
+}
+
 // LoadPositions carrega de um arquivo .txt todas as posições (lat e long) para o atributo Position da struct
 
-func (r *Route) LoadPosition() error {
+func (r *Route) LoadPositions() error {
 	if r.ID == "" {
-		return errors.New("Informe a Rota do ID")
+		return errors.New("route id not informed")
 	}
 	f, err := os.Open("destinations/" + r.ID + ".txt")
 	if err != nil {
@@ -47,11 +53,11 @@ func (r *Route) LoadPosition() error {
 	scanner := bufio.NewScanner(f)
 	for scanner.Scan() {
 		data := strings.Split(scanner.Text(), ",")
-		lat, err := strconv.ParseFloat(data[8], 64)
+		lat, err := strconv.ParseFloat(data[1], 64)
 		if err != nil {
 			return nil
 		}
-		long, err := strconv.ParseFloat(data[1], 64)
+		long, err := strconv.ParseFloat(data[0], 64)
 		if err != nil {
 			return nil
 		}
@@ -62,6 +68,8 @@ func (r *Route) LoadPosition() error {
 	}
 	return nil
 }
+
+// LoadPositions carrega de um arquivo .txt todas as posições (lat e long) para o atributo Position da struct
 
 func (r *Route) ExportJsonPositions() ([]string, error) {
 	var route PartialRoutePosition

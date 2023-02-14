@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b188866e-6f05-4fae-b73e-3a61f8e65739" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/simulador/infra/kafka/consumer.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simulador/infra/kafka/producer.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simulador/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/route/route.go" beforeDir="false" afterPath="$PROJECT_DIR$/application/route/route.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulador/application/route/route.go" beforeDir="false" afterPath="$PROJECT_DIR$/simulador/application/route/route.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +55,11 @@
     "node.js.selected.package.eslint": "(autodetect)"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Rapha\OneDrive\Área de Trabalho\Projetos\codeDelivery\simulador" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="codeDelivery" />
